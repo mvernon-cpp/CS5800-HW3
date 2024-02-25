@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "<u>phpDemo1:Folder</u>" as phpD{
+name = "php_demo1"
+subfolders = {"Source Files", "Include Path", "Remote Files"}
+files = {}
+}
+
+object "<u>Source Files:Folder</u>" as sf{
+name = "Source Files"
+subfolders = {".phalcon", "cache", "public"}
+files={}
+}
+object "<u>public:Folder</u>" as public{
+name = "public"
+subfolders = {}
+files={".htaccess", ".htrouter.php", "index.html"}
+}
+
+phpD *-- sf
+sf *-- public
+
+@enduml
